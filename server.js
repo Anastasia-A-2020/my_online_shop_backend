@@ -3,11 +3,11 @@ import chalk from "chalk";
 import dotenv from "dotenv";
 import app from "./app.js";
 
+dotenv.config();
+
 const PORT = process.env.PORT || 3000;
 
 const main = async () => {
-  dotenv.config();
-
   const mongoURI = process.env.MONGO_URI;
 
   await mongoose.connect(mongoURI);
